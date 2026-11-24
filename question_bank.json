@@ -1,0 +1,147 @@
+{
+  "_about": "Clarification question bank for personalised web-task decisions. Each decision (pick the site, or pick a value for a vague slot) is preceded by yes/no questions answered by Jev from the user's history. Slot types were mined from the vague phrases in the 150 level-1 intents only (no ground-truth values used). Three question kinds: facet = what shape the user's value has (does it include X?), hypothesis = is this candidate the user's value (one per candidate), contrast = is this candidate better supported than a rival. {slot} = the vague phrase, {cand} = a candidate value, {task} = the task.",
+
+  "site": {
+    "description": "Which website the task should be completed on",
+    "hypothesis": [
+      "Has the user done this kind of task ({task}) on {cand} before?",
+      "Has the user completed a purchase, booking, or reservation on {cand} for this kind of item or activity?",
+      "Has the user used {cand} more than once for this kind of item or activity?",
+      "Is {cand} the site the user uses most recently for this kind of item or activity?"
+    ],
+    "negative": [
+      "Is {cand} only a search engine, map, review aggregator, or general portal that the user uses on the way to another site, rather than where the task gets done?",
+      "Is {cand} a site the user associates with a different kind of item or activity than this task?"
+    ]
+  },
+
+  "location": {
+    "description": "City, area, neighbourhood, address, or airport",
+    "match": ["area", "city", "address", "location", "airport", "neighborhood", "starting point", "destination", "home"],
+    "facet": [
+      "Does the user consistently refer to a single city for this kind of activity?",
+      "Does the user refer to a specific neighbourhood or district rather than just a city?",
+      "Does the user use an airport code or airport name?"
+    ],
+    "hypothesis": [
+      "Is {cand} the location the user usually means for this kind of activity?",
+      "Does the user mention {cand} more than once in their history?"
+    ]
+  },
+
+  "budget": {
+    "description": "Price cap, budget, price range, or per-unit price",
+    "match": ["budget", "price", "cap", "cost", "spend", "afford"],
+    "facet": [
+      "Is the user's budget expressed per person or per ticket rather than as a total?",
+      "Is the user's budget expressed per unit (per dozen, per pod, per night) rather than as a total?",
+      "Does the user give a price range (minimum and maximum) rather than a single cap?",
+      "Does the user's budget differ by item category, so the category matters here?",
+      "Does the user prefer free or low-cost options rather than a specific dollar amount?"
+    ],
+    "hypothesis": [
+      "Is {cand} the user's usual budget for this kind of item or activity?",
+      "Has the user repeatedly stayed within {cand} for this kind of item or activity?"
+    ]
+  },
+
+  "rating": {
+    "description": "Minimum star rating, critic score, review standard",
+    "match": ["rating", "review", "stars", "score", "tomatometer", "standard", "experience"],
+    "facet": [
+      "Does the user's rating standard also require a minimum number of reviews?",
+      "Does the user express the standard as a plus threshold (for example 4.3+), rather than an exact value?",
+      "Does the user use a percentage or critic score rather than stars?",
+      "Does the user require the rating to be visible or verified?",
+      "Is the user's threshold different for this category than for others?"
+    ],
+    "hypothesis": [
+      "Is {cand} the user's usual rating standard for this kind of item or activity?",
+      "Does the user apply {cand} consistently across several searches?"
+    ]
+  },
+
+  "size": {
+    "description": "Clothing, shoe, or product size",
+    "match": ["size", "waist", "inseam", "fit"],
+    "facet": [
+      "Does the user specify two measurements together (for example waist by inseam like 32x32)?",
+      "Does the user use letter sizes (S, M, L) rather than numeric sizes?",
+      "Does the user specify a fit (slim, regular, wide) alongside the size?",
+      "Does the user's size include a gender or department label (men's, women's)?"
+    ],
+    "hypothesis": [
+      "Is {cand} the size the user usually buys for this kind of item?",
+      "Has the user bought {cand} more than once?"
+    ]
+  },
+
+  "party_size": {
+    "description": "Number of people or guests",
+    "match": ["party", "guests", "people", "group", "table"],
+    "facet": [
+      "Does the user's party size depend on the occasion (family, colleagues, date)?",
+      "Does the user describe the booking as a table for a number of people?"
+    ],
+    "hypothesis": [
+      "Is {cand} the party size the user usually books for this kind of occasion?"
+    ]
+  },
+
+  "time": {
+    "description": "Time window, date pattern, edition or release year",
+    "match": ["time", "window", "hour", "evening", "morning", "commute", "release", "edition", "year", "decade", "era", "weekly", "workload", "availability"],
+    "facet": [
+      "Does the user specify a time range (start and end) rather than a single time?",
+      "Does the user have more than one regular time window (for example morning and evening)?",
+      "Does the user use a 'this year or newer' style cutoff (for example 2020+)?",
+      "Does the user state a duration or weekly hour commitment?"
+    ],
+    "hypothesis": [
+      "Is {cand} the time pattern the user usually means for this kind of activity?"
+    ]
+  },
+
+  "category": {
+    "description": "Genre, cuisine, topic, interest, occupation, tour type, nutrition focus",
+    "match": ["genre", "cuisine", "interest", "occupation", "expertise", "field", "topic", "type", "focus", "style", "tour", "nutrition", "allergen", "ingredient", "roast"],
+    "facet": [
+      "Does the user have more than one preferred category here (for example two genres or cuisines)?",
+      "Does the user narrow the category by era, sub-style, or qualifier (for example 2000s indie, small-business bookkeeping)?",
+      "Is the user's preference here an exclusion or restriction (for example allergen-free, gluten-free)?"
+    ],
+    "hypothesis": [
+      "Is {cand} the user's preferred category for this kind of activity?",
+      "Does the user return to {cand} repeatedly?"
+    ]
+  },
+
+  "named_entity": {
+    "description": "Specific restaurant, brand, artist, team, theater, seller, or product",
+    "match": ["restaurant", "steakhouse", "brand", "artist", "team", "theater", "theatre", "seller", "spot", "store", "eggs", "water", "milk", "product", "favorite", "place"],
+    "facet": [
+      "Does the user name one specific place, brand, or person for this repeatedly?",
+      "Does the user's preferred item include a qualifier (for example cage-free large, organic, unsweetened)?",
+      "Does the user include the location or branch along with the name (for example Uchi Denver)?"
+    ],
+    "hypothesis": [
+      "Is {cand} the specific one the user means?",
+      "Has the user visited, booked, or bought {cand} more than once?"
+    ]
+  },
+
+  "attributes": {
+    "description": "Specs, materials, format, condition, class, seating, amenities, sort or filter habits, delivery options",
+    "match": ["spec", "criteria", "material", "finish", "format", "condition", "class", "cabin", "fare", "seating", "amenit", "requirement", "level", "difficulty", "sort", "filter", "delivery", "option", "auditorium", "frame"],
+    "facet": [
+      "Does the user's preference combine several attributes together (for example size, resolution, refresh rate, and price)?",
+      "Does the user have a habitual sort order or filter they apply on this site?",
+      "Does the user accept alternatives (for example open-box or refurbished, paperback or hardcover)?",
+      "Does the user list two acceptable options joined by 'or' (for example Dolby Cinema or IMAX)?"
+    ],
+    "hypothesis": [
+      "Is {cand} the user's usual preference for this attribute?",
+      "Has the user chosen {cand} more than once?"
+    ]
+  }
+}

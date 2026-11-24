@@ -1,0 +1,39 @@
+{
+ "C13": [
+  {"q": "Does the user consistently use Redbox On Demand for movie rentals?", "a": "yes", "evidence": "E01, E02, E04, E05, E07-E10, E13"},
+  {"q": "Does the user refer to the service as 'Redbox On Demand' rather than just 'Redbox'?", "a": "yes", "evidence": "every rental entry says 'Redbox On Demand'"},
+  {"q": "Is 'horror movie night' a single occasion rather than part of the service the user uses?", "a": "yes", "evidence": "E04"},
+  {"q": "Does the task ask for genres and a rental price limit separately from the service?", "a": "yes", "evidence": "task text"},
+  {"q": "Does the user use IMDb for reviews and ratings rather than for renting movies?", "a": "yes", "evidence": "E03, E06, E11, E12, E14, E15"}
+ ],
+ "C14": [
+  {"q": "Do the user's flights consistently depart from SFO?", "a": "yes", "evidence": "E01, E02, E05, E07, E12, E15"},
+  {"q": "Does the user refer to the airport by its code 'SFO' rather than by its full name?", "a": "yes", "evidence": "every flight entry uses 'SFO'"},
+  {"q": "Does the phrase 'my home airport' ask for an airport rather than a city?", "a": "yes", "evidence": "task phrase"}
+ ],
+ "C15": [
+  {"q": "When searching for slim-fit chinos, does the user require a minimum rating of 4.2 stars?", "a": "yes", "evidence": "E03, E04, E06"},
+  {"q": "Does the user also require a minimum number of reviews (around 50) alongside the 4.2-star rating?", "a": "yes", "evidence": "E04 ('at least 50 reviews'), E06 ('over 50 reviews')"},
+  {"q": "Are the 5-star and 4.5-star ratings ones the user gave in their own reviews, rather than a standard for choosing products?", "a": "yes", "evidence": "E01, E09, E10, E12, E14"},
+  {"q": "Are the 4.5-star and 'Los Angeles heat' 5-star ratings about Under Armour tops and shorts rather than chinos?", "a": "yes", "evidence": "E09, E12"}
+ ],
+ "C16": [
+  {"q": "Does the phrase 'my preferred genre' ask for a music genre rather than a specific artist, tour, or type of concert?", "a": "yes", "evidence": "task phrase"},
+  {"q": "Are most of the user's concert searches for hip-hop/R&B events?", "a": "yes", "evidence": "E04, E07, E09-E14 (Kendrick Lamar and SZA)"},
+  {"q": "Is pop mentioned in only one concert entry?", "a": "yes", "evidence": "E08 (Billie Eilish)"},
+  {"q": "Is 'family-friendly' a description of a venue rather than a music genre?", "a": "yes", "evidence": "E03"}
+ ],
+ "C17": [
+  {"q": "Does the user state 'under $60 per person' as the price cap in most tour searches?", "a": "yes", "evidence": "E01, E06, E09-E13"},
+  {"q": "Are $55 and $45 the prices of specific tours the user booked, rather than a stated cap?", "a": "yes", "evidence": "E03, E04, E07"},
+  {"q": "Does the task ask for the start time separately from the per-person budget?", "a": "yes", "evidence": "task text"},
+  {"q": "Do all the tours the user booked cost less than $60 per person?", "a": "yes", "evidence": "$55 (E03, E04), $45 (E07), under $60 (E12)"}
+ ],
+ "C18": [
+  {"q": "Does the user describe hotel rating standards as guest ratings of 8.5+?", "a": "yes", "evidence": "E02, E07"},
+  {"q": "Does the user pair the 8.5+ guest rating with a minimum review count in at least one hotel entry?", "a": "yes", "evidence": "E07 ('over 200 reviews')"},
+  {"q": "Is the 4.3+ rating used for restaurants rather than hotels?", "a": "yes", "evidence": "E05, E12"},
+  {"q": "Are strong WiFi and flexible cancellation amenities rather than a rating standard?", "a": "yes", "evidence": "E01, E15"},
+  {"q": "Is 'a 4-star hotel' mentioned as a requirement in more than one entry?", "a": "no", "evidence": "E01 only"}
+ ]
+}

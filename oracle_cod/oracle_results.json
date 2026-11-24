@@ -1,0 +1,983 @@
+[
+ {
+  "case_id": "C01",
+  "picks": {
+   "baseline": [
+    "4-6 weeks",
+    "4-6 weeks",
+    "4-6 weeks"
+   ],
+   "oracle_q": [
+    "4-6 weeks",
+    "4-6 weeks",
+    "4-6 weeks"
+   ],
+   "oracle_qa": [
+    "4-6 weeks",
+    "4-6 weeks",
+    "4-6 weeks"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.93,
+    0.97,
+    0.07,
+    0.9
+   ],
+   [
+    0.93,
+    0.97,
+    0.07,
+    0.9
+   ],
+   [
+    0.93,
+    0.97,
+    0.07,
+    0.91
+   ]
+  ]
+ },
+ {
+  "case_id": "C02",
+  "picks": {
+   "baseline": [
+    "Houston",
+    "Houston",
+    "Houston"
+   ],
+   "oracle_q": [
+    "Houston",
+    "Houston",
+    "Houston"
+   ],
+   "oracle_qa": [
+    "Houston",
+    "Houston",
+    "Houston"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.88,
+    0.97,
+    0.06,
+    0.91
+   ],
+   [
+    0.88,
+    0.98,
+    0.07,
+    0.92
+   ],
+   [
+    0.86,
+    0.98,
+    0.06,
+    0.91
+   ]
+  ]
+ },
+ {
+  "case_id": "C03",
+  "picks": {
+   "baseline": [
+    "under $120",
+    "under $120",
+    "under $120"
+   ],
+   "oracle_q": [
+    "under $120",
+    "under $120",
+    "under $120"
+   ],
+   "oracle_qa": [
+    "under $120",
+    "under $120",
+    "under $120"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.05,
+    0.84,
+    0.89,
+    0.84,
+    0.9
+   ],
+   [
+    0.05,
+    0.83,
+    0.9,
+    0.83,
+    0.9
+   ],
+   [
+    0.04,
+    0.84,
+    0.9,
+    0.81,
+    0.89
+   ]
+  ]
+ },
+ {
+  "case_id": "C04",
+  "picks": {
+   "baseline": [
+    "priced under $100 USD",
+    "priced under $100 USD",
+    "priced under $100 USD"
+   ],
+   "oracle_q": [
+    "priced under $100 USD",
+    "priced under $100 USD",
+    "priced under $100 USD"
+   ],
+   "oracle_qa": [
+    "priced under $100 USD",
+    "priced under $100 USD",
+    "priced under $100 USD"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.99,
+    0.98,
+    0.96,
+    0.83,
+    0.94
+   ],
+   [
+    0.99,
+    0.98,
+    0.96,
+    0.84,
+    0.95
+   ],
+   [
+    0.98,
+    0.98,
+    0.96,
+    0.83,
+    0.94
+   ]
+  ]
+ },
+ {
+  "case_id": "C05",
+  "picks": {
+   "baseline": [
+    "intermediate to advanced courses",
+    "intermediate to advanced courses",
+    "intermediate to advanced courses"
+   ],
+   "oracle_q": [
+    "intermediate to advanced courses",
+    "intermediate to advanced courses",
+    "intermediate to advanced courses"
+   ],
+   "oracle_qa": [
+    "intermediate to advanced courses",
+    "intermediate to advanced courses",
+    "intermediate to advanced courses"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.98,
+    0.93,
+    0.98,
+    0.86,
+    0.89
+   ],
+   [
+    0.99,
+    0.92,
+    0.98,
+    0.85,
+    0.89
+   ],
+   [
+    0.99,
+    0.93,
+    0.98,
+    0.85,
+    0.89
+   ]
+  ]
+ },
+ {
+  "case_id": "C06",
+  "picks": {
+   "baseline": [
+    "$100",
+    "$100",
+    "$100"
+   ],
+   "oracle_q": [
+    "$100",
+    "$100",
+    "$100"
+   ],
+   "oracle_qa": [
+    "$100",
+    "$100",
+    "$100"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.97,
+    0.95,
+    0.95,
+    0.98
+   ],
+   [
+    0.97,
+    0.95,
+    0.95,
+    0.98
+   ],
+   [
+    0.98,
+    0.93,
+    0.96,
+    0.98
+   ]
+  ]
+ },
+ {
+  "case_id": "C07",
+  "picks": {
+   "baseline": [
+    "San Jose area",
+    "San Jose area",
+    "San Jose area"
+   ],
+   "oracle_q": [
+    "San Jose area",
+    "San Jose",
+    "San Jose"
+   ],
+   "oracle_qa": [
+    "San Jose",
+    "San Jose area",
+    "San Jose"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.92,
+    0.95,
+    0.83,
+    0.95
+   ],
+   [
+    0.92,
+    0.94,
+    0.81,
+    0.96
+   ],
+   [
+    0.92,
+    0.95,
+    0.82,
+    0.96
+   ]
+  ]
+ },
+ {
+  "case_id": "C08",
+  "picks": {
+   "baseline": [
+    "morning start time",
+    "morning start time",
+    "morning start time"
+   ],
+   "oracle_q": [
+    "morning start time",
+    "morning start time",
+    "morning start time"
+   ],
+   "oracle_qa": [
+    "morning start time",
+    "morning start time",
+    "morning start time"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.96,
+    0.98,
+    0.97,
+    0.91,
+    0.05
+   ],
+   [
+    0.96,
+    0.98,
+    0.97,
+    0.93,
+    0.05
+   ],
+   [
+    0.96,
+    0.98,
+    0.97,
+    0.91,
+    0.05
+   ]
+  ]
+ },
+ {
+  "case_id": "C09",
+  "picks": {
+   "baseline": [
+    "under $6",
+    "under $6",
+    "under $6"
+   ],
+   "oracle_q": [
+    "under $6",
+    "under $6",
+    "under $6"
+   ],
+   "oracle_qa": [
+    "under $6",
+    "under $6",
+    "under $6"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.96,
+    0.98,
+    0.04
+   ],
+   [
+    0.96,
+    0.98,
+    0.05
+   ],
+   [
+    0.96,
+    0.98,
+    0.04
+   ]
+  ]
+ },
+ {
+  "case_id": "C10",
+  "picks": {
+   "baseline": [
+    "under $4.99",
+    "under $4.99",
+    "under $4.99"
+   ],
+   "oracle_q": [
+    "under $4.99",
+    "under $4.99",
+    "under $4.99"
+   ],
+   "oracle_qa": [
+    "under $4.99",
+    "under $4.99",
+    "under $4.99"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.96,
+    0.94,
+    0.05,
+    0.74
+   ],
+   [
+    0.96,
+    0.93,
+    0.06,
+    0.75
+   ],
+   [
+    0.96,
+    0.94,
+    0.05,
+    0.77
+   ]
+  ]
+ },
+ {
+  "case_id": "C11",
+  "picks": {
+   "baseline": [
+    "coursera.org",
+    "coursera.org",
+    "coursera.org"
+   ],
+   "oracle_q": [
+    "coursera.org",
+    "coursera.org",
+    "coursera.org"
+   ],
+   "oracle_qa": [
+    "coursera.org",
+    "coursera.org",
+    "coursera.org"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.95,
+    0.7,
+    0.83,
+    0.88
+   ],
+   [
+    0.95,
+    0.7,
+    0.84,
+    0.84
+   ],
+   [
+    0.95,
+    0.72,
+    0.82,
+    0.86
+   ]
+  ]
+ },
+ {
+  "case_id": "C12",
+  "picks": {
+   "baseline": [
+    "critic score >=80% on Rotten Tomatoes",
+    "critic score >=80% on Rotten Tomatoes",
+    "critic score >=80% on Rotten Tomatoes"
+   ],
+   "oracle_q": [
+    "critic score >=80% on Rotten Tomatoes",
+    "critic score >=80% on Rotten Tomatoes",
+    "critic score >=80% on Rotten Tomatoes"
+   ],
+   "oracle_qa": [
+    "critic score >=80% on Rotten Tomatoes",
+    "critic score >=80% on Rotten Tomatoes",
+    "critic score >=80% on Rotten Tomatoes"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.96,
+    0.98,
+    0.82,
+    0.97
+   ],
+   [
+    0.96,
+    0.98,
+    0.82,
+    0.97
+   ],
+   [
+    0.96,
+    0.98,
+    0.82,
+    0.96
+   ]
+  ]
+ },
+ {
+  "case_id": "C13",
+  "picks": {
+   "baseline": [
+    "Redbox On Demand",
+    "Redbox On Demand",
+    "Redbox On Demand"
+   ],
+   "oracle_q": [
+    "Redbox On Demand",
+    "Redbox On Demand",
+    "Redbox On Demand"
+   ],
+   "oracle_qa": [
+    "Redbox On Demand",
+    "Redbox On Demand",
+    "Redbox On Demand"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.94,
+    0.9,
+    0.83,
+    0.84,
+    0.95
+   ],
+   [
+    0.94,
+    0.91,
+    0.82,
+    0.84,
+    0.95
+   ],
+   [
+    0.94,
+    0.91,
+    0.84,
+    0.83,
+    0.95
+   ]
+  ]
+ },
+ {
+  "case_id": "C14",
+  "picks": {
+   "baseline": [
+    "SFO",
+    "SFO",
+    "SFO"
+   ],
+   "oracle_q": [
+    "SFO",
+    "SFO",
+    "SFO"
+   ],
+   "oracle_qa": [
+    "SFO",
+    "SFO",
+    "SFO"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.86,
+    0.71,
+    0.91
+   ],
+   [
+    0.86,
+    0.78,
+    0.91
+   ],
+   [
+    0.86,
+    0.74,
+    0.91
+   ]
+  ]
+ },
+ {
+  "case_id": "C15",
+  "picks": {
+   "baseline": [
+    "4.2+ star rating",
+    "4.2+ star rating",
+    "4.2+ star rating"
+   ],
+   "oracle_q": [
+    "4.2+ stars with over 50 reviews",
+    "4.2+ stars with over 50 reviews",
+    "4.2+ stars with over 50 reviews"
+   ],
+   "oracle_qa": [
+    "4.2+ stars with over 50 reviews",
+    "4.2+ stars with over 50 reviews",
+    "4.2+ stars with over 50 reviews"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.93,
+    0.79,
+    0.8,
+    0.97
+   ],
+   [
+    0.94,
+    0.79,
+    0.8,
+    0.97
+   ],
+   [
+    0.94,
+    0.77,
+    0.82,
+    0.97
+   ]
+  ]
+ },
+ {
+  "case_id": "C16",
+  "picks": {
+   "baseline": [
+    "hip-hop/R&B",
+    "hip-hop/R&B",
+    "hip-hop/R&B"
+   ],
+   "oracle_q": [
+    "hip-hop/R&B",
+    "hip-hop/R&B",
+    "hip-hop/R&B"
+   ],
+   "oracle_qa": [
+    "hip-hop/R&B",
+    "hip-hop/R&B",
+    "hip-hop/R&B"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.94,
+    0.78,
+    0.89,
+    0.97
+   ],
+   [
+    0.94,
+    0.78,
+    0.89,
+    0.97
+   ],
+   [
+    0.94,
+    0.8,
+    0.88,
+    0.97
+   ]
+  ]
+ },
+ {
+  "case_id": "C17",
+  "picks": {
+   "baseline": [
+    "under $60 per person",
+    "under $60 per person",
+    "under $60 per person"
+   ],
+   "oracle_q": [
+    "under $60 per person",
+    "under $60 per person",
+    "under $60 per person"
+   ],
+   "oracle_qa": [
+    "under $60 per person",
+    "under $60 per person",
+    "under $60 per person"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.95,
+    0.94,
+    0.87,
+    0.97
+   ],
+   [
+    0.95,
+    0.94,
+    0.88,
+    0.97
+   ],
+   [
+    0.95,
+    0.94,
+    0.86,
+    0.97
+   ]
+  ]
+ },
+ {
+  "case_id": "C18",
+  "picks": {
+   "baseline": [
+    "guest ratings 8.5+",
+    "guest ratings 8.5+",
+    "guest ratings 8.5+"
+   ],
+   "oracle_q": [
+    "guest ratings 8.5+",
+    "guest ratings 8.5+",
+    "guest ratings 8.5+"
+   ],
+   "oracle_qa": [
+    "guest ratings 8.5+",
+    "guest ratings 8.5+",
+    "guest ratings 8.5+"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.93,
+    0.92,
+    0.93,
+    0.8,
+    0.1
+   ],
+   [
+    0.93,
+    0.94,
+    0.94,
+    0.81,
+    0.08
+   ],
+   [
+    0.93,
+    0.93,
+    0.94,
+    0.78,
+    0.09
+   ]
+  ]
+ },
+ {
+  "case_id": "C19",
+  "picks": {
+   "baseline": [
+    "gluten allergy",
+    "gluten allergy",
+    "gluten allergy"
+   ],
+   "oracle_q": [
+    "gluten allergy",
+    "gluten allergy",
+    "gluten allergy"
+   ],
+   "oracle_qa": [
+    "gluten allergy",
+    "gluten allergy",
+    "gluten allergy"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.3,
+    0.98,
+    0.93,
+    0.03
+   ],
+   [
+    0.29,
+    0.98,
+    0.93,
+    0.04
+   ],
+   [
+    0.27,
+    0.98,
+    0.94,
+    0.04
+   ]
+  ]
+ },
+ {
+  "case_id": "C20",
+  "picks": {
+   "baseline": [
+    "under $80 per adult",
+    "under $80 per adult",
+    "under $80 per adult"
+   ],
+   "oracle_q": [
+    "under $80 per adult",
+    "under $80 per adult",
+    "under $80 per adult"
+   ],
+   "oracle_qa": [
+    "under $80 per adult",
+    "under $80 per adult",
+    "under $80 per adult"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.81,
+    0.79,
+    0.94,
+    0.81,
+    0.96
+   ],
+   [
+    0.82,
+    0.79,
+    0.94,
+    0.82,
+    0.96
+   ],
+   [
+    0.79,
+    0.77,
+    0.94,
+    0.82,
+    0.96
+   ]
+  ]
+ },
+ {
+  "case_id": "C21",
+  "picks": {
+   "baseline": [
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage"
+   ],
+   "oracle_q": [
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage"
+   ],
+   "oracle_qa": [
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.91,
+    0.94,
+    0.84,
+    0.87,
+    0.88
+   ],
+   [
+    0.91,
+    0.94,
+    0.84,
+    0.88,
+    0.88
+   ],
+   [
+    0.92,
+    0.95,
+    0.84,
+    0.89,
+    0.86
+   ]
+  ]
+ },
+ {
+  "case_id": "C22",
+  "picks": {
+   "baseline": [
+    "3-5 hours/week workload",
+    "3-5 hours/week workload",
+    "3-5 hours/week workload"
+   ],
+   "oracle_q": [
+    "3-5 hours/week workload",
+    "3-5 hours/week workload",
+    "3-5 hours/week workload"
+   ],
+   "oracle_qa": [
+    "3-5 hours/week workload",
+    "3-5 hours/week workload",
+    "3-5 hours/week workload"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.89,
+    0.95,
+    0.99,
+    0.81
+   ],
+   [
+    0.87,
+    0.95,
+    0.99,
+    0.85
+   ],
+   [
+    0.87,
+    0.95,
+    0.98,
+    0.83
+   ]
+  ]
+ },
+ {
+  "case_id": "C23",
+  "picks": {
+   "baseline": [
+    "H.E.R.",
+    "H.E.R.",
+    "H.E.R."
+   ],
+   "oracle_q": [
+    "H.E.R.",
+    "H.E.R.",
+    "H.E.R."
+   ],
+   "oracle_qa": [
+    "H.E.R.",
+    "H.E.R.",
+    "H.E.R."
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9,
+    0.84,
+    0.77,
+    0.94
+   ],
+   [
+    0.89,
+    0.84,
+    0.8,
+    0.94
+   ],
+   [
+    0.9,
+    0.83,
+    0.8,
+    0.93
+   ]
+  ]
+ },
+ {
+  "case_id": "C24",
+  "picks": {
+   "baseline": [
+    "strong WiFi",
+    "strong WiFi",
+    "strong WiFi"
+   ],
+   "oracle_q": [
+    "strong WiFi",
+    "strong WiFi",
+    "strong WiFi"
+   ],
+   "oracle_qa": [
+    "strong WiFi",
+    "strong WiFi",
+    "strong WiFi"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.93,
+    0.95,
+    0.91,
+    0.78,
+    0.79
+   ],
+   [
+    0.94,
+    0.95,
+    0.91,
+    0.78,
+    0.79
+   ],
+   [
+    0.95,
+    0.95,
+    0.9,
+    0.81,
+    0.8
+   ]
+  ]
+ }
+]

@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.pyc
+Persona2Web/
+p2w_jev_eval.py

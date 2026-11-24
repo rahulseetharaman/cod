@@ -1,0 +1,41 @@
+{
+ "C01": [
+  {"q": "Does the user describe course length together with a weekly workload in hours per week, rather than as a duration alone?", "a": "yes", "evidence": "E03, E06, E11, E13"},
+  {"q": "Does the user's history mention a course length range of 4-6 weeks more than once?", "a": "yes", "evidence": "E03, E11"},
+  {"q": "Is a fixed 6-week period mentioned in more entries than a 4-6 week range?", "a": "no", "evidence": "6-week period only in E13; 4-6 weeks in E03, E11"},
+  {"q": "Are the 'under 10 hours' courses described as quick refresher courses on Udemy rather than the university-partnered Coursera courses the user mostly looks for?", "a": "yes", "evidence": "E05"}
+ ],
+ "C02": [
+  {"q": "Does the phrase 'my usual city' ask for the name of a city rather than a venue type, an event type, or an organization?", "a": "yes", "evidence": "task phrase"},
+  {"q": "Is Houston the city that appears across the user's music-related history entries?", "a": "yes", "evidence": "E02-E13, E15"},
+  {"q": "Does any history entry place the user's music activity in a city other than Houston?", "a": "no", "evidence": "all location mentions are Houston"},
+  {"q": "Is 'Houston Music Network' an organization whose website the user visited, rather than a place?", "a": "yes", "evidence": "E12"}
+ ],
+ "C03": [
+  {"q": "Does the user's history contain any entry about gaming meetups or gaming tournaments?", "a": "no", "evidence": "none of E01-E15"},
+  {"q": "Is 'under $120' the ticket price cap the user states most often?", "a": "yes", "evidence": "$120 in E05, E08, E12, E13, E15; $75 in E01, E02; $100 in E04, E07; $40 in E10, E11"},
+  {"q": "Does the user apply the under-$120 cap specifically to major pop concerts with lower-bowl or floor seats near the stage?", "a": "yes", "evidence": "E05, E08, E12, E13, E15"},
+  {"q": "Does the user apply an under-$40 cap to smaller local events such as art exhibitions or casual gatherings?", "a": "yes", "evidence": "E03, E10, E11"},
+  {"q": "Does the user apply an under-$75 cap to local festivals or gigs with general admission?", "a": "yes", "evidence": "E01, E02"}
+ ],
+ "C04": [
+  {"q": "Is '4.6+ ratings and over 1,000 reviews' a ratings requirement rather than a price?", "a": "yes", "evidence": "E01, E06, E12"},
+  {"q": "Are '20,000+ students' and '3-5 hours/week workload' about enrollment and workload rather than price?", "a": "yes", "evidence": "E08, E14; E04, E09"},
+  {"q": "Did the user actually purchase a course on coursera.org priced under $100 USD?", "a": "yes", "evidence": "E11"},
+  {"q": "Is the under-$40 price tied to Udemy refresher courses rather than Coursera university-partnered courses?", "a": "yes", "evidence": "E05"},
+  {"q": "Is coursera.org the platform the user uses most for this kind of course?", "a": "yes", "evidence": "most entries are coursera.org"}
+ ],
+ "C05": [
+  {"q": "Does the history describe the user's preferred course level as intermediate or advanced?", "a": "yes", "evidence": "E01, E04, E07, E11, E14"},
+  {"q": "Is 'advanced teaching techniques' a course topic rather than a difficulty level?", "a": "yes", "evidence": "E02, E13"},
+  {"q": "Is 'rated 4.6+ with 1,000+ reviews' a ratings standard rather than a difficulty level?", "a": "yes", "evidence": "E01, E10, E11"},
+  {"q": "Does the task ask for ratings, weekly workload, and course length separately from difficulty?", "a": "yes", "evidence": "task text"},
+  {"q": "Does the user mention university partnership as a requirement separate from the difficulty level?", "a": "yes", "evidence": "E01, E02, E07"}
+ ],
+ "C06": [
+  {"q": "Is 'a minimum rating of 4.3 and at least 200 reviews' a rating requirement rather than a budget?", "a": "yes", "evidence": "E01, E04, E05"},
+  {"q": "Do the user's bookcase entries consistently put the budget at $100?", "a": "yes", "evidence": "E01, E02, E04, E05"},
+  {"q": "Does the user describe the bookcase budget as a cap ('under $100') in at least one entry?", "a": "yes", "evidence": "E05"},
+  {"q": "Does the user describe the bookcase price as approximate ('around $100') in at least one entry?", "a": "yes", "evidence": "E02"}
+ ]
+}

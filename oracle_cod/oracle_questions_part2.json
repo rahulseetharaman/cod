@@ -1,0 +1,38 @@
+{
+ "C07": [
+  {"q": "Does the phrase 'my area' ask for a place rather than a transit route or a transport schedule?", "a": "yes", "evidence": "task phrase"},
+  {"q": "Does the user's daily routine, such as the morning commute to the clinic, take place in San Jose?", "a": "yes", "evidence": "E01, E06, E07, E12, E13"},
+  {"q": "Are the user's Napa Valley entries about a getaway trip rather than the user's local area?", "a": "yes", "evidence": "E03 ('Napa Valley getaway'), E04, E08, E09"},
+  {"q": "Has the user looked at morning guided walks near San Jose?", "a": "yes", "evidence": "E02"}
+ ],
+ "C08": [
+  {"q": "Does the user consistently book or search for guided tours with a morning start time?", "a": "yes", "evidence": "E03, E04, E05, E06, E09, E13, E14"},
+  {"q": "Is 'small-group' a tour-size preference rather than a start time?", "a": "yes", "evidence": "E01, E05"},
+  {"q": "Is $55 per person a price rather than part of the preferred start time?", "a": "yes", "evidence": "E06, E14"},
+  {"q": "Is the busy HR workweek given as the reason for preferring mornings, rather than being part of the start time itself?", "a": "yes", "evidence": "E03, E09"},
+  {"q": "Does the user choose an afternoon or evening start for guided nature or history tours?", "a": "no", "evidence": "afternoon/evening only for the aquarium (E07) and a gym tour (E08)"}
+ ],
+ "C09": [
+  {"q": "Does the user consistently cap movie rentals at under $6?", "a": "yes", "evidence": "E01-E04, E06, E07, E09-E11"},
+  {"q": "Is the $6 figure described as a maximum ('under $6') rather than an exact price?", "a": "yes", "evidence": "E01-E04, E06, E07, E09-E11"},
+  {"q": "Does the user mention any rental price cap other than $6?", "a": "no", "evidence": "only $6 appears"}
+ ],
+ "C10": [
+  {"q": "Does the user consistently keep the almond milk price under $4.99?", "a": "yes", "evidence": "E01-E03, E05-E10, E12-E15"},
+  {"q": "Is 'specific dietary preferences' a description of food restrictions rather than a price?", "a": "yes", "evidence": "E07"},
+  {"q": "Does the user mention a price cap other than $4.99 for almond milk?", "a": "no", "evidence": "$5.99 applies to spring water (E07, E15)"},
+  {"q": "Is the under-$5.99 cap for spring water rather than almond milk?", "a": "yes", "evidence": "E07, E15"}
+ ],
+ "C11": [
+  {"q": "Is coursera.org the platform the user uses in most course-related entries?", "a": "yes", "evidence": "E01-E06, E09-E15"},
+  {"q": "Does the user use Udemy mainly for short refresher courses rather than university-partnered courses?", "a": "yes", "evidence": "E07, E08"},
+  {"q": "Does the task ask for difficulty, ratings, weekly workload, and course length separately from the platform?", "a": "yes", "evidence": "task text"},
+  {"q": "Are criteria like 4.6+ ratings and a 3-5 hours/week workload course requirements rather than part of which platform the user prefers?", "a": "yes", "evidence": "E03, E12"}
+ ],
+ "C12": [
+  {"q": "Does the user describe a critic score standard using Rotten Tomatoes critic scores?", "a": "yes", "evidence": "E02, E07, E08, E09, E12, E14"},
+  {"q": "Is the IMDb 7.5 threshold a user rating rather than a critic score?", "a": "yes", "evidence": "E01, E10"},
+  {"q": "Does the user apply the IMDb 7.5 threshold to dramas or thrillers rather than action or sci-fi movies?", "a": "yes", "evidence": "E01 (thriller), E10 (dramas)"},
+  {"q": "Does the user apply the 80% critic score threshold to action or sci-fi movies?", "a": "yes", "evidence": "E02, E08, E09, E12, E14"}
+ ]
+}

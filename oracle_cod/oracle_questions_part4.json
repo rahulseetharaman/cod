@@ -1,0 +1,41 @@
+{
+ "C19": [
+  {"q": "Does the phrase 'my allergy' ask for the allergy itself rather than a type of product?", "a": "yes", "evidence": "task phrase"},
+  {"q": "Does the history state that the user has a gluten allergy?", "a": "yes", "evidence": "E01, E11, E12, E15"},
+  {"q": "Is 'gluten-free snacks' one item from a single grocery order rather than the allergy itself?", "a": "yes", "evidence": "E04"},
+  {"q": "Does the history mention any allergy other than gluten?", "a": "no", "evidence": "only gluten appears"}
+ ],
+ "C20": [
+  {"q": "Does the user state a concrete tour budget of $80 per adult?", "a": "yes", "evidence": "E04, E06, E15"},
+  {"q": "Is 'budget-conscious' a general description without an amount?", "a": "yes", "evidence": "E04"},
+  {"q": "Is 'small-group tour with a clear itinerary' a tour-style preference rather than a budget?", "a": "yes", "evidence": "E12"},
+  {"q": "Are fitting a busy schedule and allowing leashed dogs requirements separate from the budget?", "a": "yes", "evidence": "E03, E15"},
+  {"q": "Does the user describe the $80 figure as a cap ('under $80') in more than one entry?", "a": "yes", "evidence": "E04, E06"}
+ ],
+ "C21": [
+  {"q": "Does the user most often look for lower-bowl seats near the stage?", "a": "yes", "evidence": "E06, E08, E10, E14, E15"},
+  {"q": "Did the user actually purchase lower-bowl seats near the stage?", "a": "yes", "evidence": "E15"},
+  {"q": "Is reserved center section seating tied to a single pop concert rather than the user's usual concerts?", "a": "yes", "evidence": "E04"},
+  {"q": "Are accessible seating options tied to a family-friendly venue search rather than the user's usual concerts?", "a": "yes", "evidence": "E07"},
+  {"q": "Is 'seating comfort and acoustics' something the user read reviews about rather than a seat choice?", "a": "yes", "evidence": "E05"}
+ ],
+ "C22": [
+  {"q": "Does the user consistently describe their weekly workload as 3-5 hours per week?", "a": "yes", "evidence": "E01, E05, E07, E09, E12, E14"},
+  {"q": "Does the user usually pair the 3-5 hours/week workload with a course length of 4-6 weeks?", "a": "yes", "evidence": "E01, E07, E12, E14"},
+  {"q": "Is 'priced under $100 USD' a price rather than a workload?", "a": "yes", "evidence": "E14"},
+  {"q": "Does the task ask for weekly workload and course length separately?", "a": "yes", "evidence": "task text"}
+ ],
+ "C23": [
+  {"q": "Does the user explicitly call both Beyonce and H.E.R. favorite artists?", "a": "yes", "evidence": "E03, E06, E11"},
+  {"q": "Is H.E.R. mentioned in more history entries than Beyonce?", "a": "yes", "evidence": "H.E.R. in 8 entries, Beyonce in 7"},
+  {"q": "Do Foo Fighters, John Mayer, and Norah Jones each appear in only one entry?", "a": "yes", "evidence": "E02, E02, E04"},
+  {"q": "Has the user looked into live performances by H.E.R., not only new releases?", "a": "yes", "evidence": "E01, E04"}
+ ],
+ "C24": [
+  {"q": "Is strong WiFi mentioned in at least five hotel entries?", "a": "yes", "evidence": "E01, E02, E07, E10, E14"},
+  {"q": "Is flexible or free cancellation mentioned in at least five hotel entries?", "a": "yes", "evidence": "E01, E07, E10, E11, E14"},
+  {"q": "Are self-parking and fitness centers mentioned in fewer hotel entries than strong WiFi?", "a": "yes", "evidence": "self-parking 3, fitness 2, WiFi 5"},
+  {"q": "Is breakfast included mentioned in only two hotel entries?", "a": "yes", "evidence": "E11, E15"},
+  {"q": "Does the user usually require strong WiFi and flexible cancellation together in the same entry?", "a": "yes", "evidence": "E01, E07, E10, E14"}
+ ]
+}

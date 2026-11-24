@@ -1,0 +1,554 @@
+[
+ {
+  "task_id": "Alex_Garcia_C1",
+  "intent": "Find online courses that meet my preferred difficulty and ratings standards and fit my usual weekly workload and course length on my preferred platform",
+  "phrase": "my usual course length",
+  "type": "time",
+  "candidates": [
+   "3-5 hours/week over 4-6 weeks",
+   "workload of 3-5 hours/week over a 6-week period",
+   "concise skill refresher courses under 10 hours",
+   "4-6 weeks",
+   "3-5 hours per week over 4-6 weeks"
+  ],
+  "cand_ok": [
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "4-6 weeks",
+  "baseline_ok": false,
+  "case_id": "C01"
+ },
+ {
+  "task_id": "Alex_Lee_A1",
+  "intent": "Check when my favorite artist last performed in my area",
+  "phrase": "my usual city",
+  "type": "location",
+  "candidates": [
+   "Houston",
+   "local Houston venues",
+   "Houston-based gigs",
+   "Houston Music Network",
+   "Houston shows"
+  ],
+  "cand_ok": [
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "Houston",
+  "baseline_ok": true,
+  "case_id": "C02"
+ },
+ {
+  "task_id": "Avery_Davis_B1",
+  "intent": "Find upcoming gaming meetups or tournaments in my regular city with tickets within my typical ticket price preference",
+  "phrase": "my typical ticket price preference",
+  "type": "budget",
+  "candidates": [
+   "under $75 USD",
+   "under $100",
+   "under $120",
+   "tickets priced under $40",
+   "prices are under $120 USD"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   false,
+   true,
+   false
+  ],
+  "baseline_pick": "under $120",
+  "baseline_ok": false,
+  "case_id": "C03"
+ },
+ {
+  "task_id": "Alex_Garcia_C1",
+  "intent": "Find online courses that meet my preferred difficulty and ratings standards and fit my usual weekly workload and course length on my preferred platform",
+  "phrase": "my typical budget",
+  "type": "budget",
+  "candidates": [
+   "under $40 USD",
+   "priced under $100 USD",
+   "4.6+ ratings and over 1,000 reviews",
+   "20,000+ students",
+   "3-5 hours/week workload over 4-6 weeks"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   true,
+   false,
+   true
+  ],
+  "baseline_pick": "priced under $100 USD",
+  "baseline_ok": false,
+  "case_id": "C04"
+ },
+ {
+  "task_id": "Alex_Garcia_C1",
+  "intent": "Find online courses that meet my preferred difficulty and ratings standards and fit my usual weekly workload and course length on my preferred platform",
+  "phrase": "my preferred difficulty",
+  "type": "attributes",
+  "candidates": [
+   "intermediate to advanced courses",
+   "university-partnered courses labeled intermediate or advanced",
+   "courses rated 4.6+ with 1,000+ reviews",
+   "advanced teaching techniques",
+   "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+  ],
+  "cand_ok": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "baseline_pick": "intermediate to advanced courses",
+  "baseline_ok": true,
+  "case_id": "C05"
+ },
+ {
+  "task_id": "Avery_Moore_C1",
+  "intent": "Find a new desk in my preferred material under my previous bookcase budget and add it to the cart",
+  "phrase": "my previous bookcase budget",
+  "type": "budget",
+  "candidates": [
+   "$100",
+   "budget of $100",
+   "under $100",
+   "priced around $100",
+   "with a minimum rating of 4.3 and at least 200 reviews"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   true,
+   false,
+   false
+  ],
+  "baseline_pick": "$100",
+  "baseline_ok": false,
+  "case_id": "C06"
+ },
+ {
+  "task_id": "Alex_Smith_C1",
+  "intent": "Find morning guided walks near my area within my tour budget",
+  "phrase": "my area",
+  "type": "location",
+  "candidates": [
+   "San Jose area",
+   "San Jose",
+   "Napa Valley",
+   "San Jose VTA Light Rail routes",
+   "public transport schedule for San Jose area"
+  ],
+  "cand_ok": [
+   false,
+   true,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "San Jose area",
+  "baseline_ok": false,
+  "case_id": "C07"
+ },
+ {
+  "task_id": "Avery_Lee_A1",
+  "intent": "Check availability for guided tours this weekend that start at my preferred tour start time and fit within my typical per-person budget",
+  "phrase": "my preferred tour start time",
+  "type": "time",
+  "candidates": [
+   "morning start times",
+   "morning start time",
+   "small-group morning tour options",
+   "morning start times to accommodate a busy HR workweek",
+   "morning start time for $55 per person"
+  ],
+  "cand_ok": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "baseline_pick": "morning start time",
+  "baseline_ok": true,
+  "case_id": "C08"
+ },
+ {
+  "task_id": "Avery_Davis_A1",
+  "intent": "Find on-demand movie rentals from my regular service in my preferred genres that fit my usual rental price limit, prioritizing new releases",
+  "phrase": "my usual rental price limit",
+  "type": "budget",
+  "candidates": [
+   "under $6",
+   "priced under $6",
+   "budget-friendly options under $6",
+   "ensuring the rental cost is under $6",
+   "within the budget of under $6"
+  ],
+  "cand_ok": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "baseline_pick": "under $6",
+  "baseline_ok": true,
+  "case_id": "C09"
+ },
+ {
+  "task_id": "Alex_Smith_A1",
+  "intent": "Find almond milk that matches my usual flavor exclusion and stays within my typical budget, then add one to cart",
+  "phrase": "my typical budget",
+  "type": "budget",
+  "candidates": [
+   "under $4.99",
+   "price under $4.99",
+   "ensuring the price was under $4.99",
+   "ensuring price is kept under $4.99",
+   "ensuring they meet specific dietary preferences"
+  ],
+  "cand_ok": [
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "baseline_pick": "under $4.99",
+  "baseline_ok": true,
+  "case_id": "C10"
+ },
+ {
+  "task_id": "Alex_Garcia_C1",
+  "intent": "Find online courses that meet my preferred difficulty and ratings standards and fit my usual weekly workload and course length on my preferred platform",
+  "phrase": "my preferred platform",
+  "type": "named_entity",
+  "candidates": [
+   "coursera.org",
+   "udemy",
+   "coursera.org focusing on university-partnered courses with at least 4.6 ratings and over 1,000 reviews",
+   "coursera.org for advanced teaching techniques, prioritizing university-partnered courses with high ratings",
+   "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  "baseline_pick": "coursera.org",
+  "baseline_ok": false,
+  "case_id": "C11"
+ },
+ {
+  "task_id": "Blake_Moore_A1",
+  "intent": "Find movies that meet my critic score standard in my favorite genre",
+  "phrase": "my critic score standard",
+  "type": "rating",
+  "candidates": [
+   "IMDb user rating of 7.5",
+   "critic score of at least 80%",
+   "critic score >=80% on Rotten Tomatoes",
+   "Rotten Tomatoes critic scores of 80% or higher",
+   "IMDb user rating >=7.5"
+  ],
+  "cand_ok": [
+   false,
+   true,
+   true,
+   true,
+   false
+  ],
+  "baseline_pick": "critic score >=80% on Rotten Tomatoes",
+  "baseline_ok": true,
+  "case_id": "C12"
+ },
+ {
+  "task_id": "Avery_Davis_A1",
+  "intent": "Find on-demand movie rentals from my regular service in my preferred genres that fit my usual rental price limit, prioritizing new releases",
+  "phrase": "my regular service",
+  "type": "named_entity",
+  "candidates": [
+   "Redbox On Demand",
+   "Redbox",
+   "Redbox On Demand subscription",
+   "Redbox On Demand for a horror movie night",
+   "Redbox On Demand to rent a comedy movie within the budget of under $6"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  "baseline_pick": "Redbox On Demand",
+  "baseline_ok": false,
+  "case_id": "C13"
+ },
+ {
+  "task_id": "Avery_Lee_C1",
+  "intent": "Find oneway flights to NYC tomorrow matching my cabin preference from my home airport",
+  "phrase": "my home airport",
+  "type": "location",
+  "candidates": [
+   "SFO",
+   "San Francisco",
+   "San Francisco International Airport",
+   "from SFO",
+   "departing from SFO"
+  ],
+  "cand_ok": [
+   true,
+   false,
+   false,
+   true,
+   true
+  ],
+  "baseline_pick": "SFO",
+  "baseline_ok": true,
+  "case_id": "C14"
+ },
+ {
+  "task_id": "Alex_Garcia_A1",
+  "intent": "Find men's slim-fit chinos in my usual waist/inseam that meet my typical ratings standard",
+  "phrase": "my typical ratings standard",
+  "type": "rating",
+  "candidates": [
+   "4.2+ star rating",
+   "4.2+ stars with over 50 reviews",
+   "5-star rating",
+   "4.5-star rating based on comfort and performance",
+   "5-star rating for its effectiveness in the Los Angeles heat"
+  ],
+  "cand_ok": [
+   false,
+   true,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "4.2+ star rating",
+  "baseline_ok": false,
+  "case_id": "C15"
+ },
+ {
+  "task_id": "Alex_Garcia_B1",
+  "intent": "Check seat availability for upcoming concerts in my preferred genre with seats in my preferred location",
+  "phrase": "my preferred genre",
+  "type": "category",
+  "candidates": [
+   "hip-hop/R&B",
+   "pop",
+   "Kendrick Lamar and SZA concerts",
+   "The 1975's latest tour",
+   "family-friendly concert"
+  ],
+  "cand_ok": [
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "hip-hop/R&B",
+  "baseline_ok": true,
+  "case_id": "C16"
+ },
+ {
+  "task_id": "Avery_Lee_A1",
+  "intent": "Check availability for guided tours this weekend that start at my preferred tour start time and fit within my typical per-person budget",
+  "phrase": "my typical per-person budget",
+  "type": "budget",
+  "candidates": [
+   "under $60 per person",
+   "priced at $55 per person",
+   "priced at $45 per person",
+   "priced under $60 per person",
+   "priced under $60 per person with morning start times"
+  ],
+  "cand_ok": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "baseline_pick": "under $60 per person",
+  "baseline_ok": true,
+  "case_id": "C17"
+ },
+ {
+  "task_id": "Alex_Smith_B1",
+  "intent": "Find available hotels on my preferred site that match my usual amenity requirements and meet my typical rating standards",
+  "phrase": "my typical rating standards",
+  "type": "rating",
+  "candidates": [
+   "4-star hotel",
+   "guest ratings 8.5+",
+   "4.3+ rating",
+   "8.5+ and over 200 reviews",
+   "strong WiFi and flexible cancellation"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   true,
+   false,
+   true
+  ],
+  "baseline_pick": "guest ratings 8.5+",
+  "baseline_ok": false,
+  "case_id": "C18"
+ },
+ {
+  "task_id": "Avery_Lee_B1",
+  "intent": "Find bread options safe for my allergy with my preferred delivery",
+  "phrase": "my allergy",
+  "type": "attributes",
+  "candidates": [
+   "gluten-containing items due to allergy",
+   "gluten-free labeled products",
+   "gluten-free options",
+   "gluten allergy",
+   "gluten-free snacks"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   false,
+   true,
+   false
+  ],
+  "baseline_pick": "gluten allergy",
+  "baseline_ok": true,
+  "case_id": "C19"
+ },
+ {
+  "task_id": "Alex_Smith_C1",
+  "intent": "Find morning guided walks near my area within my tour budget",
+  "phrase": "my tour budget",
+  "type": "budget",
+  "candidates": [
+   "under $80 per adult",
+   "budget-conscious",
+   "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult",
+   "small-group tour with a clear itinerary that would accommodate a busy schedule",
+   "ensuring it included a guided walk and allowed leashed dogs. The tour fit within a $80 per adult budget"
+  ],
+  "cand_ok": [
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "under $80 per adult",
+  "baseline_ok": true,
+  "case_id": "C20"
+ },
+ {
+  "task_id": "Alex_Garcia_B1",
+  "intent": "Check seat availability for upcoming concerts in my preferred genre with seats in my preferred location",
+  "phrase": "my preferred seating",
+  "type": "attributes",
+  "candidates": [
+   "lower-bowl sections",
+   "lower-bowl seats near the stage",
+   "reserved center section seating",
+   "accessible seating options",
+   "seating comfort and acoustics for lower-bowl sections"
+  ],
+  "cand_ok": [
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "lower-bowl seats near the stage",
+  "baseline_ok": true,
+  "case_id": "C21"
+ },
+ {
+  "task_id": "Alex_Garcia_C1",
+  "intent": "Find online courses that meet my preferred difficulty and ratings standards and fit my usual weekly workload and course length on my preferred platform",
+  "phrase": "my usual weekly workload",
+  "type": "time",
+  "candidates": [
+   "3-5 hours/week over 4-6 weeks",
+   "3-5 hours per week over a 6-week period",
+   "3-5 hours/week over 4-6 weeks, suitable for integrating into evening study schedules",
+   "3-5 hours/week workload",
+   "3-5 hours/week over 4-6 weeks, priced under $100 USD"
+  ],
+  "cand_ok": [
+   true,
+   false,
+   true,
+   false,
+   false
+  ],
+  "baseline_pick": "3-5 hours/week workload",
+  "baseline_ok": false,
+  "case_id": "C22"
+ },
+ {
+  "task_id": "Alex_Lee_A1",
+  "intent": "Check when my favorite artist last performed in my area",
+  "phrase": "my favorite artist",
+  "type": "named_entity",
+  "candidates": [
+   "H.E.R.",
+   "Beyonc\u00e9",
+   "Foo Fighters",
+   "John Mayer",
+   "Norah Jones"
+  ],
+  "cand_ok": [
+   false,
+   true,
+   false,
+   false,
+   false
+  ],
+  "baseline_pick": "H.E.R.",
+  "baseline_ok": false,
+  "case_id": "C23"
+ },
+ {
+  "task_id": "Alex_Smith_B1",
+  "intent": "Find available hotels on my preferred site that match my usual amenity requirements and meet my typical rating standards",
+  "phrase": "my usual amenity requirements",
+  "type": "attributes",
+  "candidates": [
+   "strong WiFi",
+   "flexible cancellation",
+   "self-parking",
+   "fitness centers",
+   "breakfast included"
+  ],
+  "cand_ok": [
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  "baseline_pick": "strong WiFi",
+  "baseline_ok": false,
+  "case_id": "C24"
+ }
+]
