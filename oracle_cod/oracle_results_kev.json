@@ -1,0 +1,983 @@
+[
+ {
+  "case_id": "C01",
+  "picks": {
+   "baseline": [
+    "3-5 hours per week over 4-6 weeks",
+    "3-5 hours per week over 4-6 weeks",
+    "3-5 hours per week over 4-6 weeks"
+   ],
+   "oracle_q": [
+    "3-5 hours per week over 4-6 weeks",
+    "3-5 hours per week over 4-6 weeks",
+    "3-5 hours per week over 4-6 weeks"
+   ],
+   "oracle_qa": [
+    "3-5 hours per week over 4-6 weeks",
+    "3-5 hours per week over 4-6 weeks",
+    "3-5 hours per week over 4-6 weeks"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9502,
+    0.9263,
+    0.1716,
+    0.0559
+   ],
+   [
+    0.9502,
+    0.9263,
+    0.1716,
+    0.0559
+   ],
+   [
+    0.9502,
+    0.9263,
+    0.1716,
+    0.0559
+   ]
+  ]
+ },
+ {
+  "case_id": "C02",
+  "picks": {
+   "baseline": [
+    "Houston",
+    "Houston",
+    "Houston"
+   ],
+   "oracle_q": [
+    "Houston",
+    "Houston",
+    "Houston"
+   ],
+   "oracle_qa": [
+    "Houston",
+    "Houston",
+    "Houston"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.3227,
+    0.9221,
+    0.0954,
+    0.6165
+   ],
+   [
+    0.3227,
+    0.9221,
+    0.0954,
+    0.6165
+   ],
+   [
+    0.3227,
+    0.9221,
+    0.0954,
+    0.6165
+   ]
+  ]
+ },
+ {
+  "case_id": "C03",
+  "picks": {
+   "baseline": [
+    "prices are under $120 USD",
+    "prices are under $120 USD",
+    "prices are under $120 USD"
+   ],
+   "oracle_q": [
+    "prices are under $120 USD",
+    "prices are under $120 USD",
+    "prices are under $120 USD"
+   ],
+   "oracle_qa": [
+    "prices are under $120 USD",
+    "prices are under $120 USD",
+    "prices are under $120 USD"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.6808,
+    0.7224,
+    0.849,
+    0.776,
+    0.971
+   ],
+   [
+    0.6808,
+    0.7224,
+    0.849,
+    0.776,
+    0.971
+   ],
+   [
+    0.6808,
+    0.7224,
+    0.849,
+    0.776,
+    0.971
+   ]
+  ]
+ },
+ {
+  "case_id": "C04",
+  "picks": {
+   "baseline": [
+    "3-5 hours/week workload over 4-6 weeks",
+    "3-5 hours/week workload over 4-6 weeks",
+    "3-5 hours/week workload over 4-6 weeks"
+   ],
+   "oracle_q": [
+    "3-5 hours/week workload over 4-6 weeks",
+    "3-5 hours/week workload over 4-6 weeks",
+    "3-5 hours/week workload over 4-6 weeks"
+   ],
+   "oracle_qa": [
+    "3-5 hours/week workload over 4-6 weeks",
+    "3-5 hours/week workload over 4-6 weeks",
+    "3-5 hours/week workload over 4-6 weeks"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.8504,
+    0.5304,
+    0.7736,
+    0.1341,
+    0.5158
+   ],
+   [
+    0.8504,
+    0.5304,
+    0.7736,
+    0.1341,
+    0.5158
+   ],
+   [
+    0.8504,
+    0.5304,
+    0.7736,
+    0.1341,
+    0.5158
+   ]
+  ]
+ },
+ {
+  "case_id": "C05",
+  "picks": {
+   "baseline": [
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+   ],
+   "oracle_q": [
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+   ],
+   "oracle_qa": [
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9773,
+    0.6752,
+    0.9008,
+    0.6462,
+    0.7967
+   ],
+   [
+    0.9773,
+    0.6752,
+    0.9008,
+    0.6462,
+    0.7967
+   ],
+   [
+    0.9773,
+    0.6752,
+    0.9008,
+    0.6462,
+    0.7967
+   ]
+  ]
+ },
+ {
+  "case_id": "C06",
+  "picks": {
+   "baseline": [
+    "budget of $100",
+    "budget of $100",
+    "budget of $100"
+   ],
+   "oracle_q": [
+    "budget of $100",
+    "budget of $100",
+    "budget of $100"
+   ],
+   "oracle_qa": [
+    "budget of $100",
+    "budget of $100",
+    "budget of $100"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.4728,
+    0.9297,
+    0.2275,
+    0.9634
+   ],
+   [
+    0.4728,
+    0.9297,
+    0.2275,
+    0.9634
+   ],
+   [
+    0.4728,
+    0.9297,
+    0.2275,
+    0.9634
+   ]
+  ]
+ },
+ {
+  "case_id": "C07",
+  "picks": {
+   "baseline": [
+    "San Jose area",
+    "San Jose area",
+    "San Jose area"
+   ],
+   "oracle_q": [
+    "San Jose area",
+    "San Jose area",
+    "San Jose area"
+   ],
+   "oracle_qa": [
+    "San Jose area",
+    "San Jose area",
+    "San Jose area"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.7576,
+    0.9729,
+    0.1146,
+    0.917
+   ],
+   [
+    0.7458,
+    0.9744,
+    0.1015,
+    0.9119
+   ],
+   [
+    0.7458,
+    0.9744,
+    0.1015,
+    0.9119
+   ]
+  ]
+ },
+ {
+  "case_id": "C08",
+  "picks": {
+   "baseline": [
+    "small-group morning tour options",
+    "small-group morning tour options",
+    "small-group morning tour options"
+   ],
+   "oracle_q": [
+    "small-group morning tour options",
+    "small-group morning tour options",
+    "small-group morning tour options"
+   ],
+   "oracle_qa": [
+    "small-group morning tour options",
+    "small-group morning tour options",
+    "small-group morning tour options"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.8595,
+    0.6902,
+    0.8824,
+    0.8818,
+    0.1722
+   ],
+   [
+    0.8595,
+    0.6902,
+    0.8824,
+    0.8818,
+    0.1722
+   ],
+   [
+    0.8595,
+    0.6902,
+    0.8824,
+    0.8818,
+    0.1722
+   ]
+  ]
+ },
+ {
+  "case_id": "C09",
+  "picks": {
+   "baseline": [
+    "budget-friendly options under $6",
+    "budget-friendly options under $6",
+    "budget-friendly options under $6"
+   ],
+   "oracle_q": [
+    "budget-friendly options under $6",
+    "budget-friendly options under $6",
+    "budget-friendly options under $6"
+   ],
+   "oracle_qa": [
+    "budget-friendly options under $6",
+    "budget-friendly options under $6",
+    "budget-friendly options under $6"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9309,
+    0.7812,
+    0.3081
+   ],
+   [
+    0.931,
+    0.789,
+    0.3039
+   ],
+   [
+    0.931,
+    0.789,
+    0.3039
+   ]
+  ]
+ },
+ {
+  "case_id": "C10",
+  "picks": {
+   "baseline": [
+    "price under $4.99",
+    "price under $4.99",
+    "price under $4.99"
+   ],
+   "oracle_q": [
+    "ensuring price is kept under $4.99",
+    "ensuring price is kept under $4.99",
+    "ensuring price is kept under $4.99"
+   ],
+   "oracle_qa": [
+    "ensuring price is kept under $4.99",
+    "ensuring price is kept under $4.99",
+    "ensuring price is kept under $4.99"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.8268,
+    0.509,
+    0.4052,
+    0.2618
+   ],
+   [
+    0.8268,
+    0.509,
+    0.4052,
+    0.2618
+   ],
+   [
+    0.8268,
+    0.509,
+    0.4052,
+    0.2618
+   ]
+  ]
+ },
+ {
+  "case_id": "C11",
+  "picks": {
+   "baseline": [
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+   ],
+   "oracle_q": [
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+   ],
+   "oracle_qa": [
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks",
+    "coursera.org to explore university-partnered intermediate or advanced courses with a focus on those having a workload of 3-5 hours per week over 4-6 weeks"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.4203,
+    0.0353,
+    0.7213,
+    0.7865
+   ],
+   [
+    0.4203,
+    0.0353,
+    0.7213,
+    0.7865
+   ],
+   [
+    0.4203,
+    0.0353,
+    0.7213,
+    0.7865
+   ]
+  ]
+ },
+ {
+  "case_id": "C12",
+  "picks": {
+   "baseline": [
+    "Rotten Tomatoes critic scores of 80% or higher",
+    "Rotten Tomatoes critic scores of 80% or higher",
+    "Rotten Tomatoes critic scores of 80% or higher"
+   ],
+   "oracle_q": [
+    "Rotten Tomatoes critic scores of 80% or higher",
+    "Rotten Tomatoes critic scores of 80% or higher",
+    "Rotten Tomatoes critic scores of 80% or higher"
+   ],
+   "oracle_qa": [
+    "Rotten Tomatoes critic scores of 80% or higher",
+    "Rotten Tomatoes critic scores of 80% or higher",
+    "Rotten Tomatoes critic scores of 80% or higher"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9717,
+    0.1205,
+    0.1657,
+    0.9822
+   ],
+   [
+    0.9725,
+    0.1124,
+    0.1754,
+    0.9812
+   ],
+   [
+    0.9725,
+    0.1124,
+    0.1754,
+    0.9812
+   ]
+  ]
+ },
+ {
+  "case_id": "C13",
+  "picks": {
+   "baseline": [
+    "Redbox On Demand to rent a comedy movie within the budget of under $6",
+    "Redbox On Demand to rent a comedy movie within the budget of under $6",
+    "Redbox On Demand to rent a comedy movie within the budget of under $6"
+   ],
+   "oracle_q": [
+    "Redbox On Demand",
+    "Redbox On Demand",
+    "Redbox On Demand"
+   ],
+   "oracle_qa": [
+    "Redbox On Demand",
+    "Redbox On Demand",
+    "Redbox On Demand"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9275,
+    0.9547,
+    0.2998,
+    0.8116,
+    0.608
+   ],
+   [
+    0.9275,
+    0.9543,
+    0.304,
+    0.8025,
+    0.6219
+   ],
+   [
+    0.9275,
+    0.9543,
+    0.304,
+    0.8025,
+    0.6219
+   ]
+  ]
+ },
+ {
+  "case_id": "C14",
+  "picks": {
+   "baseline": [
+    "departing from SFO",
+    "departing from SFO",
+    "departing from SFO"
+   ],
+   "oracle_q": [
+    "departing from SFO",
+    "departing from SFO",
+    "departing from SFO"
+   ],
+   "oracle_qa": [
+    "departing from SFO",
+    "departing from SFO",
+    "SFO"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.8016,
+    0.6882,
+    0.6032
+   ],
+   [
+    0.8016,
+    0.6882,
+    0.6032
+   ],
+   [
+    0.8016,
+    0.6882,
+    0.6032
+   ]
+  ]
+ },
+ {
+  "case_id": "C15",
+  "picks": {
+   "baseline": [
+    "4.2+ star rating",
+    "4.2+ star rating",
+    "4.2+ star rating"
+   ],
+   "oracle_q": [
+    "4.2+ star rating",
+    "4.2+ star rating",
+    "4.2+ star rating"
+   ],
+   "oracle_qa": [
+    "4.2+ star rating",
+    "4.2+ star rating",
+    "4.2+ star rating"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.957,
+    0.694,
+    0.5175,
+    0.3913
+   ],
+   [
+    0.957,
+    0.694,
+    0.5175,
+    0.3913
+   ],
+   [
+    0.957,
+    0.694,
+    0.5404,
+    0.411
+   ]
+  ]
+ },
+ {
+  "case_id": "C16",
+  "picks": {
+   "baseline": [
+    "Kendrick Lamar and SZA concerts",
+    "Kendrick Lamar and SZA concerts",
+    "Kendrick Lamar and SZA concerts"
+   ],
+   "oracle_q": [
+    "hip-hop/R&B",
+    "hip-hop/R&B",
+    "hip-hop/R&B"
+   ],
+   "oracle_qa": [
+    "hip-hop/R&B",
+    "hip-hop/R&B",
+    "hip-hop/R&B"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.742,
+    0.7742,
+    0.2893,
+    0.1328
+   ],
+   [
+    0.742,
+    0.7742,
+    0.2893,
+    0.1328
+   ],
+   [
+    0.742,
+    0.7742,
+    0.2893,
+    0.1328
+   ]
+  ]
+ },
+ {
+  "case_id": "C17",
+  "picks": {
+   "baseline": [
+    "priced under $60 per person",
+    "priced under $60 per person",
+    "priced under $60 per person"
+   ],
+   "oracle_q": [
+    "under $60 per person",
+    "under $60 per person",
+    "under $60 per person"
+   ],
+   "oracle_qa": [
+    "under $60 per person",
+    "under $60 per person",
+    "under $60 per person"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9647,
+    0.5598,
+    0.356,
+    0.7339
+   ],
+   [
+    0.9647,
+    0.5598,
+    0.356,
+    0.7339
+   ],
+   [
+    0.9647,
+    0.5598,
+    0.356,
+    0.7339
+   ]
+  ]
+ },
+ {
+  "case_id": "C18",
+  "picks": {
+   "baseline": [
+    "guest ratings 8.5+",
+    "guest ratings 8.5+",
+    "guest ratings 8.5+"
+   ],
+   "oracle_q": [
+    "guest ratings 8.5+",
+    "guest ratings 8.5+",
+    "guest ratings 8.5+"
+   ],
+   "oracle_qa": [
+    "guest ratings 8.5+",
+    "guest ratings 8.5+",
+    "guest ratings 8.5+"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9803,
+    0.7664,
+    0.392,
+    0.7549,
+    0.5212
+   ],
+   [
+    0.9803,
+    0.7664,
+    0.392,
+    0.7549,
+    0.5212
+   ],
+   [
+    0.9803,
+    0.7664,
+    0.392,
+    0.7549,
+    0.5212
+   ]
+  ]
+ },
+ {
+  "case_id": "C19",
+  "picks": {
+   "baseline": [
+    "gluten-free options",
+    "gluten-free options",
+    "gluten-free options"
+   ],
+   "oracle_q": [
+    "gluten allergy",
+    "gluten allergy",
+    "gluten allergy"
+   ],
+   "oracle_qa": [
+    "gluten allergy",
+    "gluten allergy",
+    "gluten allergy"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.8636,
+    0.9935,
+    0.3604,
+    0.3837
+   ],
+   [
+    0.8825,
+    0.9936,
+    0.3704,
+    0.3895
+   ],
+   [
+    0.8636,
+    0.9935,
+    0.3604,
+    0.3837
+   ]
+  ]
+ },
+ {
+  "case_id": "C20",
+  "picks": {
+   "baseline": [
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult",
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult",
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult"
+   ],
+   "oracle_q": [
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult",
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult",
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult"
+   ],
+   "oracle_qa": [
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult",
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult",
+    "fit a busy professional schedule and are budget-conscious, aiming for options under $80 per adult"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9705,
+    0.7197,
+    0.7568,
+    0.7167,
+    0.5666
+   ],
+   [
+    0.9705,
+    0.7197,
+    0.7568,
+    0.7167,
+    0.5666
+   ],
+   [
+    0.9705,
+    0.7197,
+    0.7568,
+    0.7167,
+    0.5666
+   ]
+  ]
+ },
+ {
+  "case_id": "C21",
+  "picks": {
+   "baseline": [
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage"
+   ],
+   "oracle_q": [
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage"
+   ],
+   "oracle_qa": [
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage",
+    "lower-bowl seats near the stage"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.91,
+    0.7644,
+    0.1975,
+    0.4295,
+    0.8133
+   ],
+   [
+    0.91,
+    0.7644,
+    0.1975,
+    0.4295,
+    0.8133
+   ],
+   [
+    0.91,
+    0.7644,
+    0.1975,
+    0.4295,
+    0.8133
+   ]
+  ]
+ },
+ {
+  "case_id": "C22",
+  "picks": {
+   "baseline": [
+    "3-5 hours/week over 4-6 weeks",
+    "3-5 hours/week over 4-6 weeks",
+    "3-5 hours/week over 4-6 weeks"
+   ],
+   "oracle_q": [
+    "3-5 hours/week over 4-6 weeks",
+    "3-5 hours/week over 4-6 weeks",
+    "3-5 hours/week over 4-6 weeks"
+   ],
+   "oracle_qa": [
+    "3-5 hours/week over 4-6 weeks",
+    "3-5 hours/week over 4-6 weeks",
+    "3-5 hours/week over 4-6 weeks"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9415,
+    0.9777,
+    0.5992,
+    0.5231
+   ],
+   [
+    0.9379,
+    0.9785,
+    0.615,
+    0.5212
+   ],
+   [
+    0.9415,
+    0.9777,
+    0.5992,
+    0.5231
+   ]
+  ]
+ },
+ {
+  "case_id": "C23",
+  "picks": {
+   "baseline": [
+    "H.E.R.",
+    "H.E.R.",
+    "H.E.R."
+   ],
+   "oracle_q": [
+    "H.E.R.",
+    "H.E.R.",
+    "H.E.R."
+   ],
+   "oracle_qa": [
+    "H.E.R.",
+    "H.E.R.",
+    "H.E.R."
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9713,
+    0.5086,
+    0.1658,
+    0.8641
+   ],
+   [
+    0.9713,
+    0.5086,
+    0.1658,
+    0.8641
+   ],
+   [
+    0.9713,
+    0.5086,
+    0.1658,
+    0.8641
+   ]
+  ]
+ },
+ {
+  "case_id": "C24",
+  "picks": {
+   "baseline": [
+    "strong WiFi",
+    "strong WiFi",
+    "strong WiFi"
+   ],
+   "oracle_q": [
+    "flexible cancellation",
+    "flexible cancellation",
+    "flexible cancellation"
+   ],
+   "oracle_qa": [
+    "flexible cancellation",
+    "flexible cancellation",
+    "flexible cancellation"
+   ]
+  },
+  "jev_answers": [
+   [
+    0.9293,
+    0.9111,
+    0.5022,
+    0.2746,
+    0.9807
+   ],
+   [
+    0.9293,
+    0.9111,
+    0.5022,
+    0.2746,
+    0.9807
+   ],
+   [
+    0.9293,
+    0.9111,
+    0.5022,
+    0.2746,
+    0.9807
+   ]
+  ]
+ }
+]

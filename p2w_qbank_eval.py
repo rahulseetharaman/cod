@@ -99,7 +99,21 @@ qgen = AsyncOpenAI(base_url=QGEN_BASE_URL, api_key=os.environ.get("QGEN_API_KEY"
     if QGEN_BASE_URL else oai
 _CACHE: dict = {}
 JEV_MODEL = "jev-1.14.0"   # pinned so pilots stay comparable if the server default moves
-jev = TypeSafeClient(api_key=_jev_api_key(), model=JEV_MODEL)
+
+
+def _typesafe_client(base_url: str | None) -> TypeSafeClient:
+    """Cloud Jev (pinned model) by default; a local Kev server when a base URL is given."""
+    if base_url:   # local server: generous timeout (the SDK default of 10 s fails under load)
+        return TypeSafeClient(api_key=_jev_api_key(), base_url=base_url, timeout=120.0)
+    return TypeSafeClient(api_key=_jev_api_key(), model=JEV_MODEL, timeout=60.0)
+
+
+# Decider and question answerer can be different models, e.g. local Kev deciding with Jev answering:
+#   DECIDER_BASE_URL=http://localhost:8009   ANSWERER_BASE_URL=http://localhost:8009
+DECIDER_BASE_URL  = os.environ.get("DECIDER_BASE_URL")
+ANSWERER_BASE_URL = os.environ.get("ANSWERER_BASE_URL")
+decider  = _typesafe_client(DECIDER_BASE_URL)
+answerer = _typesafe_client(ANSWERER_BASE_URL)
 
 
 # ── Data ──────────────────────────────────────────────────────────────────────
@@ -355,15 +369,14 @@ def _jev_typed_sync(state: str, questions: list[dict]) -> list:
             else:
                 spec[f"q{j}"] = Noul(instructions=q["q"])
         try:
-            r = jev.system_one(state, spec)
+            r = call_with_retry(answerer, state, spec, "typed answer")
             for j, q in enumerate(chunk):
                 if q["type"] == "choice":
                     probs = r.choices[f"q{j}"].probabilities
                     out.append({o: float(probs.get(f"o{k}", 0.0)) for k, o in enumerate(q["options"])})
                 else:
                     out.append(float(r.nouls[f"q{j}"].noul))
-        except Exception as e:
-            print(f"    [jev typed error] {e}", flush=True)
+        except Exception:
             out += [None] * len(chunk)
     return out
 
@@ -437,15 +450,31 @@ Return JSON: {{"candidates": [str]}}"""
 
 # ── Jev: answer clarification questions ───────────────────────────────────────
 
+CALL_RETRIES = (2, 5, 15)      # seconds between attempts; 4 attempts in total
+
+
+def call_with_retry(client: TypeSafeClient, state: str, spec: dict, label: str):
+    """system_one with retries. Raises after the last attempt — callers must record the failure, never guess."""
+    import time as _t
+    for attempt in range(len(CALL_RETRIES) + 1):
+        try:
+            return client.system_one(state, spec)
+        except Exception as e:
+            if attempt == len(CALL_RETRIES):
+                print(f"    [{label} failed after {attempt + 1} attempts] {e}", flush=True)
+                raise
+            _t.sleep(CALL_RETRIES[attempt])
+
+
 def _jev_answer_sync(state: str, questions: list[str]) -> list[float | None]:
     out: list[float | None] = []
     for i in range(0, len(questions), JEV_CHUNK):
         chunk = questions[i:i + JEV_CHUNK]
         try:
-            r = jev.system_one(state, {f"q{j}": Noul(instructions=q) for j, q in enumerate(chunk)})
+            r = call_with_retry(answerer, state, {f"q{j}": Noul(instructions=q) for j, q in enumerate(chunk)},
+                                "answer")
             out += [float(r.nouls[f"q{j}"].noul) for j in range(len(chunk))]
-        except Exception as e:
-            print(f"    [jev error] {e}", flush=True)
+        except Exception:
             out += [None] * len(chunk)
     return out
 
@@ -456,24 +485,24 @@ async def jev_answer(state: str, questions: list[str]) -> list[float | None]:
 
 def _jev_choose_sync(state: str, question: str, options: list[str]) -> list[float]:
     try:
-        r = jev.system_one(state, {"pick": Choice(
-            instructions=question, criteria={f"o{i}": o for i, o in enumerate(options)})})
+        r = call_with_retry(decider, state, {"pick": Choice(
+            instructions=question, criteria={f"o{i}": o for i, o in enumerate(options)})}, "decide")
         probs = r.choices["pick"].probabilities
         return [float(probs.get(f"o{i}", 0.0)) for i in range(len(options))]
-    except Exception as e:
-        print(f"    [jev choice error] {e}", flush=True)
+    except Exception:
         return []
 
 
 async def jev_choose(state: str, question: str, options: list[str]) -> tuple[str | None, list[float]]:
-    """Jev as the decision maker: one Choice call, full per-option distribution."""
+    """Jev as the decision maker: one Choice call, full per-option distribution.
+    On a failed call returns (None, []) — a failure is never turned into a pick."""
     if not options:
         return None, []
     if len(options) == 1:
         return options[0], [1.0]
     probs = await asyncio.to_thread(_jev_choose_sync, state, question, options)
     if not probs:
-        return options[0], []
+        return None, []
     return options[int(np.argmax(probs))], probs
 
 
@@ -1003,6 +1032,24 @@ async def run_task(pair, baselines) -> dict:
                                                                  site_match(site_rec["explicit"], gt["website"]))}
 
 
+def decision_failed(d: dict) -> bool:
+    """True if any decider pick or question answer for this decision came from a failed call."""
+    if len(d.get("candidates") or []) > 1 and not d.get("explicit"):
+        if any(a in d and d[a] is None for a in ARMS):
+            return True
+    if any(q.get("p", 0) is None for q in d.get("questions") or []):
+        return True
+    for k, v in d.items():
+        if k.endswith("_trace") and isinstance(v, list):
+            if any(t.get("a", 0) is None or t.get("p", 0) is None for t in v if isinstance(t, dict)):
+                return True
+    return False
+
+
+def failed_calls(task_result: dict) -> int:
+    return sum(decision_failed(d) for d in task_result["slots"] + [task_result["site"]])
+
+
 def load_baselines() -> dict:
     out: dict[str, dict] = {}
     for name, f, key in [("kev_base", "p2w_execution_results.json", "rewritten_task")]:
@@ -1092,8 +1139,13 @@ async def main():
             except Exception as e:
                 print(f"  ✗ {p['task_id']}: {e!r}", flush=True)
                 return
-            results.append(r)
             save_cache()
+            failed = failed_calls(r)
+            if failed:   # never save a task with a failed model call; it is rerun on the next resume
+                print(f"  ✗ {p['task_id']}: {failed} decision(s) had a failed call after retries; not saved",
+                      flush=True)
+                return
+            results.append(r)
             json.dump(results, open(out_file, "w"), indent=1)
             a = r["arms"]
             site = "".join(str(int(a[x]["site_ok"])) for x in ARMS)

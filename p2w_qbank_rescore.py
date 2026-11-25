@@ -30,11 +30,11 @@ async def rescore_file(path: Path) -> None:
     E.summarise(results)
 
 
-def rescore_oracle() -> None:
+def rescore_oracle(name: str = "oracle_results.json") -> None:
     """Oracle experiment: re-label the 24 cases with per-slot labels (from the cache filled above)."""
     d = ROOT / "oracle_cod"
     cases = json.load(open(d / "cases_with_labels.json"))
-    res = {r["case_id"]: r for r in json.load(open(d / "oracle_results.json"))}
+    res = {r["case_id"]: r for r in json.load(open(d / name))}
     maj = lambda ps: Counter(ps).most_common(1)[0][0]
     rows = []
     for c in cases:
@@ -61,8 +61,9 @@ async def main():
     files = [Path(a) for a in sys.argv[1:] if not a.startswith("--")]
     for f in files:
         await rescore_file(f)
-    if "--oracle" in sys.argv:
-        rescore_oracle()
+    for a in sys.argv[1:]:
+        if a == "--oracle" or a.startswith("--oracle="):
+            rescore_oracle(a.split("=", 1)[1] if "=" in a else "oracle_results.json")
 
 
 if __name__ == "__main__":

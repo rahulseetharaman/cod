@@ -27,6 +27,7 @@ sys.path.insert(0, str(HERE.parent))
 import p2w_qbank_eval as E  # noqa: E402
 
 REPS = 3
+OUT = HERE / __import__("os").environ.get("ORACLE_OUT", "oracle_results.json")   # e.g. oracle_results_kev.json
 CONDITIONS = ("baseline", "oracle_q", "oracle_qa")
 
 
@@ -70,7 +71,7 @@ async def main():
     assert not missing, f"no oracle questions for {missing}"
 
     results = await asyncio.gather(*[run_case(blind[cid], oq[cid]) for cid in sorted(blind)])
-    json.dump(results, open(HERE / "oracle_results.json", "w"), indent=1)
+    json.dump(results, open(OUT, "w"), indent=1)
 
     def correct(cid, pick):
         lab = labels[cid]

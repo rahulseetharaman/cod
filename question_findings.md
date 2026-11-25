@@ -3,9 +3,11 @@
 **Question:** if a decision model is given yes/no (or multiple-choice) clarification questions answered from
 the user's history before it decides, does it decide better?
 
-**Short answer:** no. Across every question format, generator, and selection rule tested, adding questions
-never beat letting Jev decide without them. At full scale (149 tasks) the questions made slot decisions
-measurably worse.
+**Short answer:** not for Jev, but yes for a weaker decider. Across every question format, generator, and
+selection rule tested, adding questions never beat letting Jev decide without them; at full scale (149 tasks)
+they made Jev's slot decisions measurably worse. With the small local Kev-0.6B as the decider,
+multiple-choice questions significantly improved both slot and website decisions — most when Jev answered
+them.
 
 ---
 
@@ -75,6 +77,26 @@ verified answer citing entries.
 Of the 12 "errors", only 3 were genuine decision errors once scored per slot; the rest were scoring
 artifacts or cases where the history does not support the ground truth.
 
+### Kev-0.6B as the decider — all 149 tasks (260 scored slot decisions)
+
+Same tasks, frozen candidates, questions, and per-slot scoring as the Jev runs; only the decider changes to
+Kev-0.6B (the smallest Kev, served locally), and the questions are answered either by Kev or by cloud Jev.
+Kev without questions is right on 63.5–63.8% of scorable slot decisions (Jev: ~85%).
+
+| Answerer | Questions | Slots: no questions → with | Slots fixed / broke | Websites fixed / broke |
+|---|---|---|---|---|
+| Kev | bank yes/no | 63.5% → 60.8% | 12 / 19 (p = 0.28) | 5 / 27 |
+| Jev | bank yes/no | 63.8% → 62.3% | 16 / 20 (p = 0.62) | 8 / 25 |
+| Kev | Qwen multiple choice | 63.8% → **68.8%** | **22 / 9 (p = 0.03)** | 12 / 6 (p = 0.24) |
+| Jev | Qwen multiple choice | 63.8% → **71.2%** | **26 / 7 (p = 0.001)** | **17 / 5 (p = 0.02)** |
+
+The same questions with Jev deciding, for comparison: bank yes/no fixed 4 / broke 14 slots and 3 / 15
+websites; Qwen multiple choice fixed 4 / broke 13 slots and 2 / 4 websites.
+
+**Oracle questions with Kev** (19 decisions scorable per slot): fixed 1, broke 0 (68.4% → 73.7%). Kev's
+answers agreed with the verified answers 77% of the time (Jev: 99%), yet giving Kev the verified answers
+changed nothing — question quality, not answering, is again the limiting factor.
+
 ---
 
 ## Findings
@@ -109,9 +131,21 @@ artifacts or cases where the history does not support the ground truth.
 6. **Selecting by answer confidence does not help.** A confident answer is not an informative one; keeping
    only the most confident answers changed one decision, for the worse.
 
-7. **There is little headroom for questions here.** Without questions Jev is right on 85% of scorable slot
-   decisions; the remaining limit is the candidate pool (the correct value is missing for 57 slots, capping
-   plan-level preference accuracy at ~76%).
+7. **There is little headroom for questions with Jev.** Without questions Jev is right on 85% of scorable
+   slot decisions; the remaining limit is the candidate pool (the correct value is missing for 57 slots,
+   capping plan-level preference accuracy at ~76%).
+
+8. **Questions help a weak decider.** The same multiple-choice questions that hurt Jev improved Kev-0.6B by
+   5–7 points on slots (22–26 fixed vs 7–9 broken). Whether questions help depends on how much room the
+   decider has, not only on the questions.
+
+9. **Answers help when they carry information the decider lacks.** Jev's answers helped Kev more than Kev's
+   own (+7.4 vs +5.0 points on slots), and only Jev-answered questions significantly improved Kev's website
+   decisions. This is the flip side of finding 2: Jev gains nothing from its own answers, but a much smaller
+   decider gains from Jev's.
+
+10. **Format matters as much as answer quality.** Yes/no questions hurt website decisions for both deciders
+    (25–27 broken vs 5–8 fixed with Kev), even when Jev answers them; multiple choice does not.
 
 ---
 
@@ -126,16 +160,27 @@ artifacts or cases where the history does not support the ground truth.
   Candidates, slots, and labels are cached in `p2w_qbank_cache.json`.
 - **Local generator settings:** qwen3.5:9b via Ollama rejects JSON mode, and its thinking step made calls
   25–260 s; `reasoning_effort="none"` brings this to 2–10 s.
+- **Failed calls must never become decisions.** The first Kev runs hit timeouts when the machine ran out of
+  memory, and the pipeline silently picked the first option on a failed call, corrupting 196 decisions in one
+  run. Calls now retry with longer timeouts; a task with any failed call is not saved and is rerun. All Kev
+  numbers above have zero failed calls.
+- **Configuration:** the decider and answerer are set independently (`DECIDER_BASE_URL`,
+  `ANSWERER_BASE_URL`; unset = cloud Jev `jev-1.14.0`). Kev runs used `jaredpalmer/kev-0.6b` via
+  `kev.serve` on port 8009.
 - **Caveats:** offline, plan-level evaluation only; the oracle questions were written by a much stronger
-  model than the generators, and two oracle cases had been seen earlier in the analysis.
+  model than the generators, and two oracle cases had been seen earlier in the analysis. Only the smallest
+  Kev was tested; larger Kev models start from a higher baseline and may gain less.
 
 ---
 
 ## Recommendations
 
-1. **Do not add pre-execution questions to the decision pipeline** on this benchmark.
-2. **If continuing the idea, move questions into browsing**, answered from the live page — a source the
+1. **Do not add pre-execution questions to a strong decider like Jev** on this benchmark.
+2. **Do use multiple-choice questions with a weak or small decider**, ideally answered by a stronger model
+   (Kev deciding with Jev answering gained 7.4 points on slots). Never use yes/no questions for website
+   decisions.
+3. **If continuing the idea, move questions into browsing**, answered from the live page — a source the
    decider has not seen — and use the multiple-choice format.
-3. **Generate questions to separate the current top options** (expected information gain), chosen before
+4. **Generate questions to separate the current top options** (expected information gain), chosen before
    looking at the evidence, rather than writing a fixed batch.
-4. **Invest in candidate generation**, which now limits accuracy more than the decision does.
+5. **Invest in candidate generation**, which now limits accuracy more than the decision does.
